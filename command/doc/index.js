@@ -23,8 +23,7 @@ const PROGRESS = require('../../util/progress')();
 
 const LOG = require('../../util/log');
 
-const ROOT_DIR = 'components';
-const TARGET_DIR = PATH.join('./', ROOT_DIR);
+const TARGET_DIR = PATH.join(process.cwd());
 const DOC_DIR = PATH.join('./', 'doc');
 const DOC_SOURCE = PATH.join(DOC_DIR, '/source');
 const GITBOOK_DIR = PATH.join(DOC_SOURCE, '/gitbook');
@@ -103,7 +102,7 @@ let createGitBook = () => {
 module.exports = () => {
     CO(function *() {
         if (!FS.existsSync(TARGET_DIR)) {
-            LOG('The `components` directory is not exist!');
+            LOG('The `Target dir` directory is not exist!');
         }
 
         let args = PROGRAM.args[0];
