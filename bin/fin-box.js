@@ -12,13 +12,8 @@
 
 process.env.NODE_PATH = __dirname + '/../node_modules/';
 
-const FS = require('fs');
 
 const PROGRAM = require('commander');
-
-if (!FS.existsSync(USER.finrc)) {
-    USER.createRC();
-}
 
 PROGRAM
     .version(require('../package').version );
