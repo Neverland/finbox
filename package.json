@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "fin": "bin/fin-box.js"
+    "finbox": "bin/fin-box.js"
   },
   "repository": {
     "type": "git",
